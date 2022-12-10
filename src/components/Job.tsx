@@ -17,7 +17,7 @@ const Job = () => {
                 <p className="new p-1  px-2 text-white font-bold ml-7 rounded-2xl text-sm"></p>
                 <p className="featured p-1 px-2 text-white font-bold ml-3 rounded-2xl text-sm"></p>
               </div>
-              <p className="text font-bold mt-2 2xl:text-2xl"></p>
+              <p className="hov text font-bold mt-2 2xl:text-2xl"></p>
               <div className="flex mt-4 gap-3">
                 <p className="txt 2xl:text-lg"></p>
                 <div className="div w-1 h-1 rounded-full"></div>
@@ -29,7 +29,7 @@ const Job = () => {
           </div>
           <hr className="my-4"></hr>
           <div className="flex flex-wrap gap-4 2xl:mx-0 2xl:my-auto">
-            <p className="text2 py-2 px-3 rounded	font-bold"></p>
+            <p className="skills text2 py-2 px-3 rounded	font-bold"></p>
           </div>
         </div>
       </div>

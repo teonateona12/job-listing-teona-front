@@ -47,3 +47,13 @@ code {
 .filter {
   box-shadow: 0px 15px 20px -5px rgba(13, 113, 130, 0.15);
 }
+.btn-x:hover {
+  background-color: black;
+}
+.hov:hover {
+  color: #5ca5a5;
+}
+.skills:hover {
+  color: white;
+  background-color: #5ca5a5;
+}
