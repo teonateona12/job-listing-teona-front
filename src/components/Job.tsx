@@ -1,7 +1,7 @@
 import image from "../images/bg-header-mobile.svg";
 import "../index.css";
 
-const Main = () => {
+const Job = () => {
   return (
     <div>
       <div className="bg">
@@ -37,4 +37,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Job;
