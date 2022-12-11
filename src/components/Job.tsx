@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "../index.css";
+import Filter from "./Filter";
+import { DataTypes } from "./types";
 
 const Job = () => {
-  const [data, setData] = useState<any>([]);
+  const [data, setData] = useState<DataTypes[]>([]);
+  const [filter, setFilter] = useState<Boolean>(false);
   useEffect(() => {
     const getData = async () => {
       const res = await axios.get("http://localhost:5000/");
@@ -13,12 +16,20 @@ const Job = () => {
     getData();
   }, []);
 
+  const filterHandler = (
+    e: React.MouseEvent<HTMLParagraphElement, MouseEvent>
+  ) => {
+    setFilter(true);
+    const text = e.currentTarget.textContent;
+  };
+
   return (
     <div>
       <div className="bg">
         <img src="../images/bg-header-mobile.svg" />
       </div>
-      {data.map((userdata: any) => (
+      {filter ? <Filter /> : ""}
+      {data.map((userdata: DataTypes) => (
         <div>
           <div className="px-5 py-16 2xl:p-36">
             <div className="box rounded-md bg-white p-5 lg:px-10 2xl:flex 2xl:justify-between 2xl:p-10">
@@ -61,19 +72,31 @@ const Job = () => {
               </div>
               <hr className="my-4"></hr>
               <div className="flex flex-wrap gap-4 2xl:mx-0 2xl:my-auto">
-                {userdata?.languages.map((language: any) => (
-                  <p className="skills text2 py-2 px-3 rounded	font-bold">
+                {userdata?.languages.map((language: string) => (
+                  <p
+                    className="skills text2 py-2 px-3 rounded	font-bold"
+                    onClick={filterHandler}
+                  >
                     {language}
                   </p>
                 ))}
-                <p className="skills text2 py-2 px-3 rounded	font-bold">
+                <p
+                  className="skills text2 py-2 px-3 rounded	font-bold"
+                  onClick={filterHandler}
+                >
                   {userdata?.role}
                 </p>
-                <p className="skills text2 py-2 px-3 rounded	font-bold">
+                <p
+                  className="skills text2 py-2 px-3 rounded	font-bold"
+                  onClick={filterHandler}
+                >
                   {userdata?.level}
                 </p>
-                {userdata?.tools.map((tool: any) => (
-                  <p className="skills text2 py-2 px-3 rounded	font-bold">
+                {userdata?.tools?.map((tool: string) => (
+                  <p
+                    className="skills text2 py-2 px-3 rounded	font-bold"
+                    onClick={filterHandler}
+                  >
                     {tool}
                   </p>
                 ))}
