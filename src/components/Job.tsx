@@ -6,7 +6,8 @@ import { DataTypes } from "./types";
 
 const Job = () => {
   const [data, setData] = useState<DataTypes[]>([]);
-  const [filter, setFilter] = useState<Boolean>(false);
+  const [filterArray, setFilterArray] = useState<(string | null)[]>([]);
+
   useEffect(() => {
     const getData = async () => {
       const res = await axios.get("http://localhost:5000/");
@@ -19,8 +20,8 @@ const Job = () => {
   const filterHandler = (
     e: React.MouseEvent<HTMLParagraphElement, MouseEvent>
   ) => {
-    setFilter(true);
-    const text = e.currentTarget.textContent;
+    const text: string | null = e.currentTarget.textContent;
+    setFilterArray([...filterArray, text]);
   };
 
   return (
@@ -28,7 +29,11 @@ const Job = () => {
       <div className="bg-blue">
         <img src="../images/bg-header-mobile.svg" />
       </div>
-      {filter ? <Filter /> : ""}
+      {filterArray.length !== 0 ? (
+        <Filter filterArray={filterArray} setFilterArray={setFilterArray} />
+      ) : (
+        ""
+      )}
       {data.map((userdata: DataTypes) => (
         <div>
           <div className="px-5 py-16 2xl:p-36">

@@ -1,6 +1,5 @@
 export interface DataTypes {
   id: number;
-
   company: string;
   logo: string;
   new: boolean;
@@ -11,8 +10,10 @@ export interface DataTypes {
   postedAt: string;
   contract: string;
   location: string;
-
   languages: string[];
-
   tools?: string[];
+}
+export interface FilterTypes {
+  filterArray: (string | null)[];
+  setFilterArray: (value: (string | null)[]) => void;
 }
