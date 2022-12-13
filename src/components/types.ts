@@ -16,4 +16,6 @@ export interface DataTypes {
 export interface FilterTypes {
   filterArray: (string | null)[];
   setFilterArray: (value: (string | null)[]) => void;
+  fullData: (string | null)[];
+  setData: any;
 }
