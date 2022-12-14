@@ -11,11 +11,10 @@ export interface DataTypes {
   contract: string;
   location: string;
   languages: string[];
-  tools?: string[];
+  tools?: any;
 }
-export interface FilterTypes {
-  filterArray: (string | null)[];
-  setFilterArray: (value: (string | null)[]) => void;
-  fullData: (string | null)[];
-  setData: any;
+
+export interface JobTypes {
+  job: DataTypes;
+  handleTagClick: any;
 }
