@@ -1,46 +1,77 @@
-# Getting Started with Create React App
+# Job Listing App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Table of Contents
 
-## Available Scripts
+- [Prerequisites](#Prerequisites)
+- [Tech Stack](#Tech-Stack)
+- [Getting Started](#Getting-Started)
+- [Project Structure](#Project-Structure)
+- [Deployment](#Deployment)
+- [Resources](#Resources)
 
-In the project directory, you can run:
+#
 
-### `npm start`
+### Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- <img src="readme/nodejs.png" width="25" style="top: 8px" /> Node JS @16.X and up
+- <img src="readme/npm.png" width="25" style="top: 8px" /> npm @8 and up
+- <img src="readme/typescript.png" width="25" style="top: 8px" /> Typescript @4 and up
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#
 
-### `npm test`
+### Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- <img src="readme/react.png" width="25" style="top: 8px" /> React @18.2.0 - front-end framework
+- <img src="readme/tailwind.png" width="25" style="top: 8px" /> Tailwind @3.1.8 - CSS framework
+- <img src="readme/axios.png" width="25" style="top: 8px" /> Axios @1.1.2 - Promise based HTTP client for the browser and node.js
 
-### `npm run build`
+#
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. First of all you need to clone app repository from github:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+git clone https://github.com/teonateona12/job-listing-teona-front.git
+```
 
-### `npm run eject`
+2. Next step requires install all the dependencies.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+npm install
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. To see project in action
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+npm start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#
 
-## Learn More
+### Project Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+|--- src
+|   |--- components #  components
+|   |--- index.ts # export all components
+- package.json     # dependency manager configurations
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#
+
+### Deployment
+
+Before every deployment you need to create build file.
+
+```
+npm run build
+```
+
+after this you can use this file to deploy project on server.
+
+#
+
+### Resources
+
+- [figma](https://www.figma.com/file/GH3KQieJ01Kf2bObKkmuks/job-listings-with-filtering?node-id=0%3A1&t=JvbJHUnjdcbktsGV-0).

@@ -1,6 +1,5 @@
 export interface DataTypes {
   id: number;
-
   company: string;
   logo: string;
   new: boolean;
@@ -11,8 +10,11 @@ export interface DataTypes {
   postedAt: string;
   contract: string;
   location: string;
-
   languages: string[];
+  tools?: any;
+}
 
-  tools?: string[];
+export interface JobTypes {
+  job: DataTypes;
+  handleTagClick: any;
 }
