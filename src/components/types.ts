@@ -11,10 +11,10 @@ export interface DataTypes {
   contract: string;
   location: string;
   languages: string[];
-  tools?: any;
+  tools: string[];
 }
 
 export interface JobTypes {
   job: DataTypes;
-  handleTagClick: any;
+  handleTagClick: (n: string) => void;
 }

@@ -10,7 +10,7 @@ function App() {
 
   useEffect(() => {
     const getData = async () => {
-      const res = await axios.get("http://localhost:5000/");
+      const res = await axios.get("https://job-listing-api-95pl.onrender.com/");
       setData(res.data);
     };
 
@@ -34,7 +34,7 @@ function App() {
       tags.push(...tools);
     }
     let result = true;
-    filters.map((filter: any) => {
+    filters.map((filter: string) => {
       if (!tags.includes(filter)) {
         result = false;
       }
